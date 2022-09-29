@@ -1,0 +1,59 @@
+@mixin mq($width, $type: min) {
+  @if $type == max {
+    $width: $width - 1px;
+  }
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+@mixin mqs($max_width, $min_width) {
+  $min_width: $min_width - 1px;
+  @media only screen and (max-width: $max_width) and (min-width: $min_width) {
+    @content;
+  }
+}
+@mixin z($layer) {
+  z-index: $layer;
+}
+@mixin blueButton {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+@mixin buttonText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold !important;
+  padding: 3px 0px;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint ==tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==big-desktop {
+    @media (max-width: 1800px) {
+      @content;
+    }
+  }
+}

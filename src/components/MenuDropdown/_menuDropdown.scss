@@ -1,0 +1,50 @@
+@import "./../../assets/scss/utilities/mixins";
+.menu-dropdown {
+  & > button > span {
+    & > .MuiAvatar-root {
+      margin-right: 8px;
+    }
+    & > .texts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 10px;
+      text-transform: capitalize;
+      @include mq(960px, max) {
+        display: none;
+      }
+      & > .title {
+        font-size: 14px;
+        line-height: 20px;
+        color: black;
+        font-weight: bold;
+      }
+      & > .subtitle {
+        font-size: 11px;
+        line-height: 12px;
+        color: grey;
+        font-weight: 400;
+        margin-left: 10px;
+        & > sup {
+          text-transform: lowercase;
+        }
+      }
+    }
+    & > .icon-holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      margin-left: 4px;
+    }
+  }
+  & > .MuiButtonBase-root {
+    min-width: max-content !important;
+  }
+  .message-icon {
+    opacity: 1;
+    filter: invert(31%) sepia(72%) saturate(567%) hue-rotate(153deg)
+      brightness(93%) contrast(88%);
+  }
+}

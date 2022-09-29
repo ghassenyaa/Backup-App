@@ -1,0 +1,41 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1212.0",
+    "axios": "^0.27.2",
+    "azure-blob-to-s3": "^1.2.2",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "beautify": "0.0.8",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "dropbox": "^4.0.15",
+    "dropbox-v2-api": "^2.5.4",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "fs": "0.0.1-security",
+    "google-auth-library": "^8.1.1",
+    "googleapis": "^39.2.0",
+    "https": "^1.0.0",
+    "inquirer": "^9.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.6",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.7",
+    "path": "^0.12.7",
+    "time-stamp": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
